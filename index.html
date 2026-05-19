@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dark Upload Gallery</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #0f0f0f;
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .card {
+        width: 420px;
+        background: #171717;
+        border: 1px solid #2a2a2a;
+        border-radius: 18px;
+        padding: 30px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+      }
+
+      h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #9ca3af;
+        margin-bottom: 25px;
+        font-size: 14px;
+      }
+
+      .upload-box {
+        border: 2px dashed #3a3a3a;
+        border-radius: 14px;
+        padding: 30px;
+        text-align: center;
+        background: #111111;
+        margin-bottom: 20px;
+      }
+
+      input[type="file"] {
+        color: #d1d5db;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 12px;
+        background: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .btn:hover {
+        opacity: 0.85;
+      }
+
+      .note {
+        margin-top: 15px;
+        font-size: 12px;
+        text-align: center;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <h1>Web Upload</h1>
+
+      <p>Upload gambar dengan tampilan modern dark mode.</p>
+
+      <form action="upload.php" method="post" enctype="multipart/form-data">
+        <div class="upload-box">
+          <input type="file" name="fileToUpload" id="fileToUpload" required />
+        </div>
+
+        <button type="submit" class="btn" name="submit">Upload File</button>
+      </form>
+
+      <div class="note">Format: JPG, JPEG, PNG, GIF</div>
+    </div>
+  </body>
+</html>
